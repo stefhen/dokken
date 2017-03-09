@@ -35,9 +35,9 @@ before_script:
 
 script: KITCHEN_YAML=.kitchen.dokken.yml KITCHEN_LOCAL_YAML=.kitchen.dokken.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
 
-matrix:
-  include:
-    - script:
-      - chef exec rake setup_test_environment
-      - "./.travis_install.sh"
-      env: UNIT_AND_LINT=1
+#matrix:
+  #include:
+    #- script:
+      #- chef exec rake setup_test_environment
+      #- "./.travis_install.sh"
+      #env: UNIT_AND_LINT=1
