@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/stefhen/dokken.svg?branch=master)](https://travis-ci.org/stefhen/dokken)
+
 # dokken Cookbook
 
 Enter the cookbook description here.
