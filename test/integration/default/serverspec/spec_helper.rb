@@ -1,7 +1,8 @@
 require 'serverspec'
 
 if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM).nil?
-	set :backend, :exec 
+  set :backend, :exec
 else
-	set :backend, :cmd  set :os, family: 'fedora'
+  set :backend, :cmd
+  set :os, family: 'fedora'
 end
