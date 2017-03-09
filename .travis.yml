@@ -33,7 +33,7 @@ before_script:
   - sudo chef gem install kitchen-dokken
   - chef exec bundle install --jobs=3 --retry=3
 
-script: KITCHEN_LOCAL_YAML=.kitchen.dokken.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
+script: KITCHEN_YAML=.kitchen.dokken.yml KITCHEN_LOCAL_YAML=.kitchen.dokken.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
 
 matrix:
   include:
