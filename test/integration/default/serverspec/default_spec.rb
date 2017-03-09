@@ -8,10 +8,6 @@ describe package('rsync') do
   it { should be_installed }
 end
 
-describe package('tmux') do
-  it { should be_installed }
-end
-
 describe package('screen') do
   it { should be_installed }
 end

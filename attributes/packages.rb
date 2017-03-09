@@ -1,1 +1,1 @@
-default['dokken']['packages'] = %w[nmap rsync tmux screen lftp]
+default['dokken']['packages'] = %w[nmap rsync screen lftp]
