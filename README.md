@@ -2,7 +2,7 @@
 
 # dokken Cookbook
 
-Enter the cookbook description here.
+enter the cookbook description here.
 
 e.g.
 This cookbook makes your favorite breakfast sandwich.
