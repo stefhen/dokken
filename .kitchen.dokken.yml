@@ -50,6 +50,4 @@ platforms:
 suites:
 - name: default
   run_list:
-  - recipe[apt]
   - recipe[dokken]
-  - recipe[java]

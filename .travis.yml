@@ -20,10 +20,10 @@ services: docker
 
 env:
   matrix:
-      #- INSTANCE=default-ubuntu-1404
+    - INSTANCE=default-ubuntu-1404
     - INSTANCE=default-ubuntu-1604
-      #- INSTANCE=default-centos-6
-      #- INSTANCE=default-centos-7
+    - INSTANCE=default-centos-6
+    - INSTANCE=default-centos-7
 before_script:
   - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
   - eval "$(/opt/chefdk/bin/chef shell-init bash)"
@@ -34,10 +34,3 @@ before_script:
   - chef exec bundle install --jobs=3 --retry=3
 
 script: KITCHEN_YAML=.kitchen.dokken.yml KITCHEN_LOCAL_YAML=.kitchen.dokken.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
-
-#matrix:
-  #include:
-    #- script:
-      #- chef exec rake setup_test_environment
-      #- "./.travis_install.sh"
-      #env: UNIT_AND_LINT=1
