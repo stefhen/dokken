@@ -16,7 +16,7 @@ describe package('lftp') do
   it { should be_installed }
 end
 
-if host_inventory['platform'] == 'ubuntu' do
+if host_inventory['platform'] == 'ubuntu'
   describe file('/usr/bin/java') do
     it { should exist }
   end
