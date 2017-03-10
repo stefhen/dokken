@@ -16,6 +16,6 @@ describe package('lftp') do
   it { should be_installed }
 end
 
-describe file('/usr/local/bin/java') do
+describe file('/usr/bin/java') do
   it { should exist }
 end
