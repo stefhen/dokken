@@ -20,4 +20,14 @@ if host_inventory['platform'] == 'ubuntu'
   describe file('/usr/bin/java') do
     it { should exist }
   end
+
+  describe package('netcat') do
+    it { should be_installed }
+  end
+end
+
+if host_inventory['platform'] == 'centos'
+  describe package('nc') do
+    it { should be_installed }
+  end
 end
