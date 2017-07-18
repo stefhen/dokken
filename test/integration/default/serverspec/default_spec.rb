@@ -1,19 +1,11 @@
 require 'spec_helper'
 
-describe package('nmap') do
-  it { should be_installed }
-end
+packages = %w[nmap rsync screen lftp irssi]
 
-describe package('rsync') do
-  it { should be_installed }
-end
-
-describe package('screen') do
-  it { should be_installed }
-end
-
-describe package('lftp') do
-  it { should be_installed }
+packages.each do |p|
+  describe package(p) do
+    it { should be_installed }
+  end
 end
 
 if host_inventory['platform'] == 'ubuntu'
@@ -26,7 +18,7 @@ if host_inventory['platform'] == 'ubuntu'
   end
 end
 
-if host_inventory['platform'] == 'centos'
+if host_inventory['platform'] == 'redhat'
   describe package('nc') do
     it { should be_installed }
   end
