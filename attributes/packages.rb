@@ -1,1 +1,1 @@
-default['dokken']['packages'] = %w[nmap rsync screen lftp]
+default['dokken']['packages'] = %w[nmap rsync screen lftp nc]
